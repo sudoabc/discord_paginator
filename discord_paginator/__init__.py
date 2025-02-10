@@ -108,6 +108,16 @@ class Paginator(discord.ui.View):
       await interaction.response.defer()
     
     return check
+  
+  async def popular_paginator(self):
+    """
+    Start a paginator with the most used layout
+    """
+
+    self.add_button("back", label="<")
+    self.add_button("delete", label="x", style=discord.ButtonStyle.danger)
+    self.add_button("next", label=">")
+    await self.start()
 
   async def default_paginator(self): 
     """
