@@ -114,7 +114,7 @@ class Paginator(discord.ui.View):
     Start a paginator with the most used layout
     """
 
-    self.add_button("back", label="<")
+    self.add_button("prev", label="<")
     self.add_button("delete", label="x", style=discord.ButtonStyle.danger)
     self.add_button("next", label=">")
     await self.start()
@@ -125,7 +125,7 @@ class Paginator(discord.ui.View):
     """
 
     self.add_button("first", label='first')
-    self.add_button("back", label='back')
+    self.add_button("prev", label='back')
     self.add_button("goto", label='go to')
     self.add_button("next", label='next')
     self.add_button("last", label='last')
